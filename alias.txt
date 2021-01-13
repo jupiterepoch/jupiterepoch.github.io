@@ -1,0 +1,21 @@
+home="/mnt/c/Users/zcsjupiter/Desktop/"
+douban="https://pypi.douban.com/simple"
+alias clone=gitClone
+gitClone() {
+  git clone git@github.com:jupiterepoch/$1.git
+}
+alias submit=submitcode
+submitcode()
+{
+    git add .
+    git commit -m $1
+    git push origin master
+}
+alias caen="ssh jupiterz@login.engin.umich.edu"
+alias joj=run_program_with_joj_std
+run_program_with_joj_std()
+{
+    clang++ -Wall -Werror -O2 -pedantic -Wextra -g --std=c++17 $1.cpp -o $1
+    ./$1
+}
+

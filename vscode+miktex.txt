@@ -1,0 +1,81 @@
+安装Perl
+VSCode->preferences->settings搜索latex
+进入edit in settings.json
+
+"latex-workshop.latex.recipes": [
+        {
+          "name": "texify",  //放在最前面为默认编译方案, 适用于MikTex
+          "tools": [
+            "texify"
+          ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+      ],
+      "latex-workshop.latex.tools": [
+        {
+          "name": "texify",
+          "command": "texify",
+          "args": [
+            "--synctex",
+            "--pdf",
+            "--tex-option=\"-interaction=nonstopmode\"",
+            "--tex-option=\"-file-line-error\"",
+            "%DOC%.tex"
+          ]
+        },
+        {
+            // 编译工具和命令
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+      ],
+      "latex-workshop.view.pdf.viewer": "external",
+      "latex-workshop.view.pdf.external.viewer.command": "C:/Users/zcsjupiter/AppData/Local/SumatraPDF/SumatraPDF.exe",
+      "latex-workshop.view.pdf.external.viewer.args": [
+          "-forward-search",
+          "%TEX%",
+          "%LINE%",
+          "-reuse-instance",
+          "-inverse-search",
+          "\"C:/Users/zcsjupiter/AppData/Local/Programs/Microsoft VS Code/Code.exe\" \"C:/Users/zcsjupiter/AppData/Local/Programs/Microsoft VS Code/resources/app/out/cli.js\" -gr \"%f\":\"%l\"",
+          "%PDF%"
+      ],
+      "latex-workshop.latex.autoClean.run": "onBuilt",
+

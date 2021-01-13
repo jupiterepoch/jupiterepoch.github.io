@@ -1,0 +1,115 @@
+sudo apt-get update
+sudo apt-get upgrade
+**********************************************************************************
+清华源提高速度
+pip3 install --upgrade pip
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple pkg_name 
+豆瓣源
+https://pypi.douban.com/simple
+**********************************************************************************
+nano /etc/apt/sources.list
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+**********************************************************************************
+用perf和valgrind检测内存和CPU使用
+**********************************************************************************
+内存
+valgrind --tool=massif --massif-out-file=massif.out --time-unit=B ./
+ms_print massif.out | less
+速度
+make profile
+perf record --call-graph=dwarf -e cycles:u time ./program_debug < [input]
+perf report
+测函数时间
+time program -options args
+**********************************************************************************
+Installing Perf 在WSL安装Perf
+**********************************************************************************
+sudo apt install build-essential flex bison libssl-dev libelf-dev
+git clone --depth=1 https://github.com/microsoft/WSL2-Linux-Kernel.git
+cd WSL2-Linux-Kernel/tools/perf
+make
+
+set -x
+apt install flex bison
+git clone https://github.com/microsoft/WSL2-Linux-Kernel --depth 1
+cd WSL2-Linux-Kernel/tools/perf
+make -j8
+sudo cp perf /usr/local/bin
+**********************************************************************************
+set-up powerline font in vscode
+https://blog.zhaytam.com/2019/04/19/powerline-and-zshs-agnoster-theme-in-vs-code/
+
+git clone https://github.com/abertsch/Menlo-for-Powerline.git
+sudo mv "Menlo for Powerline.ttf" /usr/share/fonts/
+sudo fc-cache -vf /usr/share/fonts/
+
+Then use ctrl shift p in vscode and search for "user setting"
+then go into "Terminal Font", set font family as 
+"Menlo for Powerline"
+**********************************************************************************
+Install Oh-my-zsh in ubuntu
+https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
+
+sudo apt install curl wget git
+
+use below to get the content
+if fail to fetch, use sudo nano /etc/hosts to add the ip-address for raw.github.com and raw.githubusercontent.com
+The ip-address are found at https://www.ip-tracker.org/locator/ip-lookup.php?ip=Raw.githubusercontent.com
+or a similar site
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+OR
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+After installing zsh, modify ~/.zshrc to set the theme to "agnoster", and modify the plugins filed to add more addons
+git clone https://gitee.com/null_454_5218/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+******************************************
+cuda-repo-ubuntu2004-11-0-local_11.0.2-450.51.05-1_amd64.deb
+cudnn-11.0-linux-x64-v8.0.4.30.tgz
+******************************************
+using xargs to copy all files in subdirectory
+find Owl\ City/ -type f -name *.m4a | xargs -d'\n' -n1 -I {} cp {} all-owl/
+***********************************************
+Create Swap File:
+fallocate -l 3G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo '/swapfile none swap sw 0 0' >> /etc/fstab
+free -m
+**************************************************************
+Add user in Linux
+useradd -m -g users -G wheels -s /bin/bash jupiter
+passwd username
+EDITOR=nano visudo // enable sudo privileges for user
+****************************************************************
+use ssh-key to prevent typing passwd everytime 
+@local machine (PC)
+ssh-keygen to generate a key pair
+copy the Absolute Path of the private key to vscode config file
+The config file should look like this:
+> Host Lab
+>   Hostname 202.121.180.26
+>   User root
+>   Port 10004
+>   IdentityFile C:\Users\***\.ssh\id_rsa (If use wsl, then set path to /home/jupiter/.ssh/id_rsa)
+Connect cmdline: ssh -i ~/.ssh/id_rsa root@202.121.180.26 -p 10004
+@remote machine (Lab Server)
+at ~/.ssh directory, create file named as "authorized_keys"
+chmod 600 authorized_keys
+paste *Public* key to it, one key per line
+******************************************************************
+install xdm on ubuntu
+https://sourcedigit.com/22574-xtreme-download-manager-xdm-linux-ubuntu/
+***************************************
+ssh-keygen -t rsa -C "email"
+
