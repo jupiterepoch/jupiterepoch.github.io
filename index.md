@@ -2,7 +2,7 @@
 
 ## Tutorials
 
-- [useful-codes](/useful-codes.txt)
+- [useful-codes](useful-codes.txt)
 - [Setting up latex environment in vscode](/vscode+miktex.txt)
 - [Getting netease usr id](/网易云id.txt)
 
