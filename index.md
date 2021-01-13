@@ -14,7 +14,7 @@
 
 ## others
 
-[shell script for installing oh-my-zsh](/zsh_install.sh)
-[a sample latex project](/sample.tex)
-[eecs281 includes for c++ scripts](/includes.h)
-[eecs281 magic Makefile](/Makefile281)
+- [shell script for installing oh-my-zsh](/zsh_install.sh)
+- [a sample latex project](/sample.tex)
+- [eecs281 includes for c++ scripts](/includes.h)
+- [eecs281 magic Makefile](/Makefile281)
