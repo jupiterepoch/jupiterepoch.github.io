@@ -98,11 +98,11 @@ ssh-keygen to generate a key pair
 copy the Absolute Path of the private key to vscode config file
 The config file should look like this:
 > Host Lab
->   Hostname 202.121.180.26
->   User root
->   Port 10004
+>   Hostname xxx.xx.xxx
+>   User usrname
+>   Port 1000
 >   IdentityFile C:\Users\***\.ssh\id_rsa (If use wsl, then set path to /home/jupiter/.ssh/id_rsa)
-Connect cmdline: ssh -i ~/.ssh/id_rsa root@202.121.180.26 -p 10004
+Connect cmdline: ssh -i ~/.ssh/id_rsa root@xxx.xx.xxx -p 1000
 @remote machine (Lab Server)
 at ~/.ssh directory, create file named as "authorized_keys"
 chmod 600 authorized_keys
