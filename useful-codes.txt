@@ -112,4 +112,6 @@ install xdm on ubuntu
 https://sourcedigit.com/22574-xtreme-download-manager-xdm-linux-ubuntu/
 ***************************************
 ssh-keygen -t rsa -C "email"
+**************************************
+使用iTunes管理音乐https://mp.weixin.qq.com/s/F4PniJcmHQi3Lc33Qxb9Lg
 
