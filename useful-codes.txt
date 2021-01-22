@@ -6,6 +6,11 @@ pip3 install --upgrade pip
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple pkg_name 
 豆瓣源
 https://pypi.douban.com/simple
+永久：~/.pip/pip.config
+[global]
+index-url = http://pypi.douban.com/simple
+[install]
+trusted-host=pypi.douban.com
 **********************************************************************************
 nano /etc/apt/sources.list
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
@@ -55,6 +60,7 @@ Then use ctrl shift p in vscode and search for "user setting"
 then go into "Terminal Font", set font family as 
 "Menlo for Powerline"
 **********************************************************************************
+apt-get install powerline
 Install Oh-my-zsh in ubuntu
 https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
 
@@ -120,9 +126,13 @@ ssh-keygen -t rsa -C "email"
 scp command 传文件到服务器
 scp -C -P port path/to/local/file root@xxxx.xx:/path/to/destination
 *******************************
+export PATH="/Users/username/miniconda3/bin:$PATH"
 conda换源
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/linux-64/
 config --remove-key channels to remove
+*************************************
+torch cpu
+pip install torch==1.7.1+cpu torchvision==0.8.2+cpu torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
