@@ -119,3 +119,10 @@ ssh-keygen -t rsa -C "email"
 ***********************************
 scp command 传文件到服务器
 scp -C -P port path/to/local/file root@xxxx.xx:/path/to/destination
+*******************************
+conda换源
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/linux-64/
+config --remove-key channels to remove
