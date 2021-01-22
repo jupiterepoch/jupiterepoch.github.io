@@ -1,6 +1,6 @@
 sudo apt-get update
 sudo apt-get upgrade
-**********************************************************************************
+**************************************************************
 清华源提高速度
 pip3 install --upgrade pip
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple pkg_name 
