@@ -21,10 +21,10 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-**********************************************************************************
+**************************************************************
 sudo apt install build-essential
 用perf和valgrind检测内存和CPU使用
-**********************************************************************************
+**************************************************************
 内存
 valgrind --tool=massif --massif-out-file=massif.out --time-unit=B ./
 ms_print massif.out | less
