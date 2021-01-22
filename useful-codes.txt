@@ -115,3 +115,6 @@ ssh-keygen -t rsa -C "email"
 **************************************
 使用iTunes管理音乐https://mp.weixin.qq.com/s/F4PniJcmHQi3Lc33Qxb9Lg
 
+***********************************
+scp command 传文件到服务器
+scp -C -P port path/to/local/file root@xxxx.xx:/path/to/destination
