@@ -152,4 +152,5 @@ sudo dpkg -i ***.deb
 查看内存信息powershell：
 wmic
 memorychip
-
+**********************
+export PATH="/path/to/dir:$PATH"
