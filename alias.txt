@@ -18,4 +18,5 @@ run_program_with_joj_std()
     clang++ -Wall -Werror -O2 -pedantic -Wextra -g --std=c++17 $1.cpp -o $1
     ./$1
 }
-
+alias ml="cd /mnt/g/SJTU/WN2021/eecs445"                                                    alias cv="cd /mnt/g/SJTU/WN2021/eecs442"
+source /home/jupiter/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  

@@ -11,7 +11,7 @@ https://pypi.douban.com/simple
 index-url = http://pypi.douban.com/simple
 [install]
 trusted-host=pypi.douban.com
-**********************************************************************************
+**************************************************************
 nano /etc/apt/sources.list
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
@@ -36,7 +36,7 @@ perf report
 time program -options args
 **********************************************************************************
 Installing Perf 在WSL安装Perf
-**********************************************************************************
+**************************************************************
 sudo apt install build-essential flex bison libssl-dev libelf-dev
 git clone --depth=1 https://github.com/microsoft/WSL2-Linux-Kernel.git
 cd WSL2-Linux-Kernel/tools/perf
@@ -48,7 +48,7 @@ git clone https://github.com/microsoft/WSL2-Linux-Kernel --depth 1
 cd WSL2-Linux-Kernel/tools/perf
 make -j8
 sudo cp perf /usr/local/bin
-**********************************************************************************
+**************************************************************
 set-up powerline font in vscode
 https://blog.zhaytam.com/2019/04/19/powerline-and-zshs-agnoster-theme-in-vs-code/
 
@@ -148,3 +148,8 @@ sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
 sudo apt install sublime-text
 *********************************************
 sudo dpkg -i ***.deb
+************************************************
+查看内存信息powershell：
+wmic
+memorychip
+
