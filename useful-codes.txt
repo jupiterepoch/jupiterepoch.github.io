@@ -155,6 +155,8 @@ memorychip
 **********************
 export PATH="/path/to/dir:$PATH"
 *********************
+remove /etc/apt/sources.list.d/* (annoying sources that slow down)
+https://documentation.its.umich.edu/node/2256#android
 use L2TP/IPsec 
 sudo add-apt-repository ppa:nm-l2tp/network-manager-l2tp
 sudo apt-get update
