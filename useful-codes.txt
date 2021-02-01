@@ -165,3 +165,7 @@ sudo apt-get install network-manager-l2tp  network-manager-l2tp-gnome
 dpkg --force-all --configure -a
 apt --fix-broken install
 apt-get -f install
+********************************
+jupyter to pdf (via latex)
+jupyter nbconvert --to pdf notebook.ipynb
+install packages as prompted (pandoc installed by downloading tar.gz, then adding its /bin to path)
