@@ -165,7 +165,22 @@ sudo apt-get install network-manager-l2tp  network-manager-l2tp-gnome
 dpkg --force-all --configure -a
 apt --fix-broken install
 apt-get -f install
+<<<<<<< HEAD
 ********************************
 jupyter to pdf (via latex)
 jupyter nbconvert --to pdf notebook.ipynb
 install packages as prompted (pandoc installed by downloading tar.gz, then adding its /bin to path)
+=======
+*********************************
+download xdm at
+https://subhra74.github.io/xdm/
+cd into directory, then use sudo ./install.sh
+to uninstall sudo /opt/xdman/uninstall.sh
+********************************
+download sougou at
+https://pinyin.sogou.com/linux/
+follow install guide
+https://pinyin.sogou.com/linux/help.php
+
+
+>>>>>>> 4012b6a0154b3a858921d594939ff1c05493428e

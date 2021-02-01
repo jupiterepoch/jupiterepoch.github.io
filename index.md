@@ -11,7 +11,7 @@
 - [bash alias](alias.txt)
 - [C](/C.sublime-build)
 - [C++ single file](/C++.sublime-build)
-- [latex config in vscode](vscode+miktex.txt)
+- [latex config in vscode](latex-vscode-ubuntu.txt)
 
 ## others
 
