@@ -13,6 +13,26 @@
 \usepackage{indentfirst}
 \usepackage{multirow}
 \usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amsthm}
+\usepackage{amssymb,url}
+\usepackage{color}
+\usepackage{url}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{cite}
+
+
+
+
+% Solutions use a modified proof environment
+\newenvironment{solution}
+               {\let\oldqedsymbol=\qedsymbol
+                \renewcommand{\qedsymbol}{$\blacktriangleleft$}
+                \begin{proof}[\bfseries\upshape Solution]}
+               {\end{proof}
+                \renewcommand{\qedsymbol}{\oldqedsymbol}}
+
 
 \begin{document}
 
