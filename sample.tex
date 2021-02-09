@@ -23,7 +23,38 @@
 \usepackage{cite}
 
 
+\definecolor{nblue}{rgb}{0.25, 0.41, 0.88}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.63,0.32,0.18}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
 
+% --------------------------------------------------------------
+%                         MATLAB code
+% --------------------------------------------------------------
+% \lstset{language=Matlab,
+% keywordstyle=\color{nblue},
+% numberstyle=\tiny\color{gray},
+% stringstyle=\color{mauve}}
+
+% --------------------------------------------------------------
+%                         Python code
+% --------------------------------------------------------------
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\fontsize{8}{10}},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{nblue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 
 % Solutions use a modified proof environment
 \newenvironment{solution}

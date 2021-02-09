@@ -18,6 +18,8 @@ sudo apt-get install texmaker
 
 sudo apt-get install texlive-xetex
 
+sudo apt-get install texlive-science
+
 # 1.6 安装publisher
 
 sudo apt-get install texlive-publishers
