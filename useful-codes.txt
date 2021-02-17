@@ -197,6 +197,14 @@ download sougou at
 https://pinyin.sogou.com/linux/
 follow install guide
 https://pinyin.sogou.com/linux/help.php
-
+**********************************
+shutdown slow:
+sudo cp /etc/systemd/system.conf /etc/systemd/system.conf.orig
+DefaultTimeoutStopSec=5s
+*********************************
+Make windows default boot:
+sudo nano -B /etc/default/grub
+grep menuentry /boot/grub/grub.cfg
+GRUB_DEFAULT="Windows NT/2000/XP (loader) (on /dev/sda1)"
 
 >>>>>>> 4012b6a0154b3a858921d594939ff1c05493428e
