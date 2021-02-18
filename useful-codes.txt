@@ -206,5 +206,5 @@ Make windows default boot:
 sudo nano -B /etc/default/grub
 grep menuentry /boot/grub/grub.cfg
 GRUB_DEFAULT="Windows NT/2000/XP (loader) (on /dev/sda1)"
-
+sudo usermod -aG docker z
 >>>>>>> 4012b6a0154b3a858921d594939ff1c05493428e
