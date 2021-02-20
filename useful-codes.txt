@@ -207,4 +207,12 @@ sudo nano -B /etc/default/grub
 grep menuentry /boot/grub/grub.cfg
 GRUB_DEFAULT="Windows NT/2000/XP (loader) (on /dev/sda1)"
 sudo usermod -aG docker z
->>>>>>> 4012b6a0154b3a858921d594939ff1c05493428e
+#######################################
+using v2ray
+use yxx's proxy at /usr/local/etc/v2ray
+$ sudo bash install-release.sh
+$ sudo bash install-dat-release.sh
+$ systemctl start v2ray
+$ v2ray --config=/usr/local/etc/v2ray/config.json
+
+
