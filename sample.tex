@@ -2,15 +2,10 @@
 \usepackage[colorlinks,linkcolor=black,urlcolor=black]{hyperref}
 \usepackage{float}
 \usepackage{verbatim}
-\usepackage{setspace}
 \usepackage{enumerate}
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{pdfpages}
 \usepackage{listings}
-\usepackage{wrapfig}
 \usepackage{geometry}
-\usepackage{indentfirst}
 \usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{mathrsfs}
@@ -21,6 +16,31 @@
 \usepackage{epsfig}
 \usepackage{subfigure}
 \usepackage{cite}
+% Solutions use a modified proof environment
+\newenvironment{solution}
+               {\let\oldqedsymbol=\qedsymbol
+                \renewcommand{\qedsymbol}{$\blacktriangleleft$}
+                \begin{proof}[\bfseries\upshape Solution]}
+               {\end{proof}
+                \renewcommand{\qedsymbol}{\oldqedsymbol}}
+% use \mbox{}\\ to force a change of line
+\begin{document}
+
+\section*{Problem 1}
+\subsection*{(a)}
+
+\begin{equation}
+hello
+\end{equation}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=100pt]{2.2.a.png}
+\end{figure}
 
 
 \definecolor{nblue}{rgb}{0.25, 0.41, 0.88}
@@ -55,25 +75,3 @@
   breakatwhitespace=true,
   tabsize=3
 }
-
-% Solutions use a modified proof environment
-\newenvironment{solution}
-               {\let\oldqedsymbol=\qedsymbol
-                \renewcommand{\qedsymbol}{$\blacktriangleleft$}
-                \begin{proof}[\bfseries\upshape Solution]}
-               {\end{proof}
-                \renewcommand{\qedsymbol}{\oldqedsymbol}}
-
-
-\begin{document}
-
-\section*{Problem 1}
-\subsection*{(a)}
-
-
-\begin{equation}
-hello
-\end{equation}
-
-
-\end{document}
