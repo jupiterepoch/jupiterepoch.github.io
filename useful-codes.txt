@@ -214,5 +214,7 @@ $ sudo bash install-release.sh
 $ sudo bash install-dat-release.sh
 $ systemctl start v2ray
 $ v2ray --config=/usr/local/etc/v2ray/config.json
-
+#######################################
+sudo nano /etc/sudoers.d/jupiter
+jupiter ALL=(ALL) NOPASSWD:ALL
 
