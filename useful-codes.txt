@@ -217,4 +217,6 @@ $ v2ray --config=/usr/local/etc/v2ray/config.json
 #######################################
 sudo nano /etc/sudoers.d/jupiter
 jupiter ALL=(ALL) NOPASSWD:ALL
-
+##############################
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
