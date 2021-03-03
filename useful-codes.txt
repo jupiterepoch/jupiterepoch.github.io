@@ -219,3 +219,6 @@ chmod 600 ~/.ssh/authorized_keys
 #################################
 pip install gdown
 gdown https://drive.google.com/u/0/uc?d=1kwkEBS5DCpe_coWPXenDc8qO1Vjv_EwX
+##################################
+echo set completion-ignore-case on | sudo tee -a /etc/inputrc
+remove the line in /inputrc to disable it
