@@ -222,3 +222,19 @@ gdown https://drive.google.com/u/0/uc?d=1kwkEBS5DCpe_coWPXenDc8qO1Vjv_EwX
 ##################################
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 remove the line in /inputrc to disable it
+#################################
+conda activate your_conda_env_name
+conda install anaconda-clean
+anaconda-clean # add `--yes` to avoid being prompted to delete each one
+rm -rf ~/miniconda3
+vi ~/.bashrc
+# -> Search for conda and delete the lines containing it
+# -> If you're not sure if the line belongs to conda, comment it instead of deleting it just to be safe
+source ~/.bashrc
+rm -rf ~/.anaconda_backup
+############################################
+https://github.com/abertsch/Menlo-for-Powerline
+add in vscode user settings:
+{
+"terminal.integrated.fontFamily": "Menlo for Powerline",
+}
