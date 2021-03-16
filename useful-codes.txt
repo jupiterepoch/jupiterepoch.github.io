@@ -238,3 +238,5 @@ add in vscode user settings:
 {
 "terminal.integrated.fontFamily": "Menlo for Powerline",
 }
+####################
+powercfg.exe /hibernate on
