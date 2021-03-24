@@ -1,22 +1,31 @@
-home="/mnt/c/Users/zcsjupiter/Desktop/"
-douban="https://pypi.douban.com/simple"
-alias clone=gitClone
-gitClone() {
-  git clone git@github.com:jupiterepoch/$1.git
-}
+export douban=https://pypi.douban.com/simple
+export cloud="zcs@202.112.238.128:~/mount"
+alias py3="conda activate py37"
+alias py="python"
+alias lab="ssh zcs@202.112.238.128 -p 12022"
+alias zcs="ssh zcs@202.112.238.128"
+alias clean="rm *.log && rm *.synctex.gz && rm *.aux && rm *.out"
+
 alias submit=submitcode
-submitcode()
-{
-    git add .
+submitcode() {
+    git add . --all
     git commit -m $1
     git push origin master
 }
-alias caen="ssh jupiterz@login.engin.umich.edu"
-alias joj=run_program_with_joj_std
-run_program_with_joj_std()
-{
-    clang++ -Wall -Werror -O2 -pedantic -Wextra -g --std=c++17 $1.cpp -o $1
-    ./$1
+
+export git_path="/home/jupiter"
+alias pull=pull_all
+pull_all() {
+    cd $git_path/hw-445 && git pull
+    cd $git_path/codes-442 && git pull
+    cd $git_path/assign-498 && git pull
+    cd $git_path/math371 && git pull
 }
-alias ml="cd /mnt/g/SJTU/WN2021/eecs445"                                                    alias cv="cd /mnt/g/SJTU/WN2021/eecs442"
-source /home/jupiter/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
+alias push=push_all
+push_all() {
+    cd $git_path/hw-445 && submit auto-push
+    cd $git_path/codes-442 && submit auto-push
+    cd $git_path/assign-498 && submit auto-push
+    cd $git_path/math371 && submit auto-push
+}
+
