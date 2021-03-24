@@ -240,3 +240,14 @@ add in vscode user settings:
 }
 ####################
 powercfg.exe /hibernate on
+#################
+Click at the start of the text you want to select
+Scroll the window to the end of the text you want select
+Shift + click the end of your selection
+All text between your first click and your last Shift + click is now selected
+Then you can Ctrl + Shift + C your selection out of there
+
+OR Shift + Home
+Select the first line
+Shift + End
+Shift + click on the last character
