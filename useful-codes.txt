@@ -219,3 +219,8 @@ chmod 600 ~/.ssh/authorized_keys
 #################################
 pip install gdown
 gdown https://drive.google.com/u/0/uc?d=1kwkEBS5DCpe_coWPXenDc8qO1Vjv_EwX
+############################
+$ truncate -s 6G my6gbfile # create a 6GB junk file
+$ split --bytes=2GB --numeric-suffixes my6gbfile my6gbfile.part # --number=4
+$ cat my6gbfile.part* > my6gbfile.recombined
+$ md5sum --binary my6gbfile my6gbfile.recombined
