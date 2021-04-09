@@ -16,6 +16,7 @@
 \usepackage{epsfig}
 \usepackage{subfigure}
 \usepackage{cite}
+\usepackage{pythonhighlight}
 % Solutions use a modified proof environment
 \newenvironment{solution}
                {\let\oldqedsymbol=\qedsymbol
@@ -52,6 +53,11 @@ hello
 
     \caption{Comparison} 
 \end{figure}
+
+% vertical flip
+\scalebox{1}[-1]{\includegraphics[width=0.5\linewidth]{myimg}}
+% horizontal flip
+\scalebox{-1}[1]{\includegraphics[width=0.5\linewidth]{myimg}}
 
 \definecolor{nblue}{rgb}{0.25, 0.41, 0.88}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}

@@ -1,0 +1,30 @@
+export douban="https://pypi.douban.com/simple"
+export vul="202.112.238.128"
+alias lab="ssh zcs@202.112.238.128 -p 12022"
+alias py="python"
+alias clean="rm *.aux && rm *.log && rm *.synctex.gz && rm *.out"
+alias submit=submitcode
+submitcode() {
+    git add .
+    git commit -m $1
+    git push origin master
+}
+alias v2r=start_v2ray
+start_v2ray() {
+    systemctl v2ray
+    v2ray --config=/usr/local/etc/v2ray/config.json
+}
+alias pull=pull_all_repo
+pull_all_repo() {
+    cd ~/math371 && git pull
+    cd ~/codes-442 && git pull
+    cd ~/hw-445 && git pull
+    cd ~/assign-498 && git pull
+}
+alias push=push_all_repo
+push_all_repo() {
+    cd ~/math371 && submit auto-push
+    cd ~/codes-442 && submit auto-push
+    cd ~/hw-445 && submit auto-push
+    cd ~/assign-498 && submit auto-push
+}

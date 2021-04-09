@@ -1,0 +1,8 @@
+sudo apt-get update && sudo apt-get install zsh build-essential git curl octave texlive-base  texlive-science gnome-tweaks fcitx -y
+sudo snap install code --classic
+conda install jupyter notebook bandit ipython pandas numpy scikit-learn scipy nltk opencv
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+conda install -c huggingface transformers
+pip install canvassyncer
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+https://pinyin.sogou.com/linux/help.php

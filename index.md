@@ -19,3 +19,6 @@
 - [a sample latex project](sample.tex)
 - [eecs281 includes for c++ scripts](includes.h)
 - [eecs281 magic Makefile](Makefile281) | [Download](/Makefile281)
+
+## Print
+- [curr](./print/exam_midterm_review_solutions.pdf)
