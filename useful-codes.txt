@@ -261,8 +261,13 @@ Shift + End
 Shift + click on the last character
 ##########################
 another default shell on remote machine for vscode
+ctrl shift p
+remote settings -> remote
 "terminal.integrated.shell.linux": "/usr/bin/bash"
 ##########
 mkvirtualenv benchmark
 ###
 tee doesn't record all results: rerun with python -u (disable buffering)
+###
+miniconda download repo
+https://repo.anaconda.com/miniconda/
