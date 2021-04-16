@@ -264,4 +264,5 @@ another default shell on remote machine for vscode
 "terminal.integrated.shell.linux": "/usr/bin/bash"
 ##########
 mkvirtualenv benchmark
-
+###
+tee doesn't record all results: rerun with python -u (disable buffering)
