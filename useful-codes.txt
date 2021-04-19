@@ -34,6 +34,17 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
 **************************************************************
+deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+############################################
 sudo apt install build-essential
 用perf和valgrind检测内存和CPU使用
 **************************************************************
@@ -271,3 +282,7 @@ tee doesn't record all results: rerun with python -u (disable buffering)
 ###
 miniconda download repo
 https://repo.anaconda.com/miniconda/
+##############
+ROCM
+pip3 install torch -f https://download.pytorch.org/whl/rocm4.0.1/torch_stable.html
+pip3 install ninja && pip3 install 'git+https://github.com/pytorch/vision.git@v0.9.1'
