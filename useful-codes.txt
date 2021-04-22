@@ -286,3 +286,7 @@ https://repo.anaconda.com/miniconda/
 ROCM
 pip3 install torch -f https://download.pytorch.org/whl/rocm4.0.1/torch_stable.html
 pip3 install ninja && pip3 install 'git+https://github.com/pytorch/vision.git@v0.9.1'
+################
+sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" Container_Name
+ping –c 3 xxx.xx.xx.xx
+ssh root@xxx.xx.xx.xx
