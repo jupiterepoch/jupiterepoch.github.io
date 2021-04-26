@@ -290,3 +290,9 @@ pip3 install ninja && pip3 install 'git+https://github.com/pytorch/vision.git@v0
 sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" Container_Name
 ping –c 3 xxx.xx.xx.xx
 ssh root@xxx.xx.xx.xx
+################
+注释：        先CTRL+K，然后CTRL+C
+取消注释： 先CTRL+K，然后CTRL+U
+###############
+sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-science latexmk
+install latexworkshop from vscode
