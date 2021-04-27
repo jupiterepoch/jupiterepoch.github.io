@@ -298,7 +298,7 @@ sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recomm
 install latexworkshop from vscode
 ###############
 docker run -it -p 5000:22
-Inside docker [Commit docker after run]: 
+Inside docker [Commit docker after run]: docker commit 
 service ssh start
 #	/etc/init.d/ssh start
 #	apt install openssh-server telnet
