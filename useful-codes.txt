@@ -305,3 +305,5 @@ service ssh start
 #	lsof -i -P -n | grep LISTEN
 #	chown jupiter /home/jupiter
 For VScode: "remote.SSH.useLocalServer": false,
+#解决cisco anyconnect闪退：删除opt目录里所有相关文件，重装
+ 
