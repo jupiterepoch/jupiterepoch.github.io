@@ -296,3 +296,12 @@ ssh root@xxx.xx.xx.xx
 ###############
 sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-science latexmk
 install latexworkshop from vscode
+###############
+docker run -it -p 5000:22
+Inside docker [Commit docker after run]: 
+service ssh start
+#	/etc/init.d/ssh start
+#	apt install openssh-server telnet
+#	lsof -i -P -n | grep LISTEN
+#	chown jupiter /home/jupiter
+For VScode: "remote.SSH.useLocalServer": false,
