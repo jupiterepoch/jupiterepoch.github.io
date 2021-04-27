@@ -2,6 +2,7 @@ export douban=https://pypi.douban.com/simple
 export cloud="zcs@202.112.238.128:~/mount"
 alias py3="conda activate py37"
 alias py="python"
+export vul="202.112.238.128"
 alias lab="ssh zcs@202.112.238.128 -p 12022"
 alias zcs="ssh zcs@202.112.238.128"
 alias clean="rm *.log && rm *.synctex.gz && rm *.aux && rm *.out"
@@ -13,7 +14,7 @@ submitcode() {
     git push origin master
 }
 
-export git_path="/home/jupiter"
+export git_path="/home/jupiter"s
 alias pull=pull_all
 pull_all() {
     cd $git_path/hw-445 && git pull
@@ -29,3 +30,9 @@ push_all() {
     cd $git_path/math371 && submit auto-push
 }
 
+
+alias v2r=start_v2ray
+start_v2ray() {
+    systemctl v2ray
+    v2ray --config=/usr/local/etc/v2ray/config.json
+}
