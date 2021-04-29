@@ -314,3 +314,7 @@ sudo service ssh restart
 ###########################
 wget -q -O - https://repo.radeon.com/rocm/apt/4.0.1/rocm.gpg.key | sudo apt-key add -
 echo 'deb [arch=amd64] https://repo.radeon.com/rocm/apt/4.0.1/ xenial main' | sudo tee /etc/apt/sources.list.d/rocm.list
+###########################
+sudo apt install rocm-dkms rocm-libs rccl
+sudo apt autoremove rocm-opencl rocm-dkms rocm-dev rocm-utils
+Recommend to check sudo dpkg -l | grep hsa . Replace hsa with hip, llvm, rocm, rock and make sure that all packages are removed. Recommend to do the same for all other additional packages also if you installed anything explicitly.
