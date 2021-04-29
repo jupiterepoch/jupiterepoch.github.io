@@ -5,7 +5,7 @@ alias py="python"
 export vul="202.112.238.128"
 alias lab="ssh zcs@202.112.238.128 -p 12022"
 alias zcs="ssh zcs@202.112.238.128"
-alias clean="rm *.log && rm *.synctex.gz && rm *.aux && rm *.out"
+alias clean="rm *.fls && rm *.fdb_latexmk && rm *.log && rm *.synctex.gz && rm *.aux && rm *.out"
 
 alias submit=submitcode
 submitcode() {
