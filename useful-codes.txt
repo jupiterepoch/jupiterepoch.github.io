@@ -297,7 +297,7 @@ ssh root@xxx.xx.xx.xx
 sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-science latexmk
 install latexworkshop from vscode
 ###############
-docker run -it -p 5000:22
+docker run -it -p 5000:22 -v /home/jupiter/zcs:/mnt rocm_torch
 Inside docker [Commit docker after run]: docker commit 
 service ssh start
 #	/etc/init.d/ssh start
@@ -306,4 +306,11 @@ service ssh start
 #	chown jupiter /home/jupiter
 For VScode: "remote.SSH.useLocalServer": false,
 #解决cisco anyconnect闪退：删除opt目录里所有相关文件，重装
- 
+ ##############################
+cannot login as root
+nano /etc/ssh/sshd_config
+PermitRootLogin yes
+sudo service ssh restart
+###########################
+wget -q -O - https://repo.radeon.com/rocm/apt/4.0.1/rocm.gpg.key | sudo apt-key add -
+echo 'deb [arch=amd64] https://repo.radeon.com/rocm/apt/4.0.1/ xenial main' | sudo tee /etc/apt/sources.list.d/rocm.list
