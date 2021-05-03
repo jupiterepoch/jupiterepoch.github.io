@@ -318,3 +318,10 @@ echo 'deb [arch=amd64] https://repo.radeon.com/rocm/apt/4.0.1/ xenial main' | su
 sudo apt install rocm-dkms rocm-libs rccl
 sudo apt autoremove rocm-opencl rocm-dkms rocm-dev rocm-utils
 Recommend to check sudo dpkg -l | grep hsa . Replace hsa with hip, llvm, rocm, rock and make sure that all packages are removed. Recommend to do the same for all other additional packages also if you installed anything explicitly.
+###########################
+install cuda wsl2
+follow guide on nvidia
+gpg verification failed, reason is download auto redirect to .cn, whereas gpg is by .com. 
+Solve: ping developer.download.nvidia.com to get the ip, and nano /etc/hosts to redirect both site traffic to .com ip
+45.43.38.238 developer.download.nvidia.cn
+45.43.38.238 developer.download.nvidia.com
