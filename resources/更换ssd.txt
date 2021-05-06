@@ -1,0 +1,10 @@
+1. 拧下底板螺丝
+2. 撬棒撬开，拆下底板
+3. 拔电源电池取下旧ssd，安装新ssd，接通电池
+4. 开机F9进入windows（必须是家庭中文版才能自动激活）
+5. 进入setup.office.com，选择“已经输入了产品密钥。。。通过Microsoft账户安装”
+6. 安装必要程序
+https://askubuntu.com/questions/1247527/successfully-installed-ubuntu-20-04-lts-into-c-windows-partition-but-window
+40G / (root)
+4G /swap
+40G /home
