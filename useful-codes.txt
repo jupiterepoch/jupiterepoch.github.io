@@ -325,3 +325,8 @@ gpg verification failed, reason is download auto redirect to .cn, whereas gpg is
 Solve: ping developer.download.nvidia.com to get the ip, and nano /etc/hosts to redirect both site traffic to .com ip
 45.43.38.238 developer.download.nvidia.cn
 45.43.38.238 developer.download.nvidia.com
+######################
+# make a new branch locally and check it out
+git checkout -b <branch>
+# push the local current branch to remote "<branch>"
+git push -u origin <branch>
